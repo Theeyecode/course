@@ -1,0 +1,18 @@
+-- Query to take th enumber of reviews and group by full moon and review_sentiment
+
+WITH mart_fullmoon_reviews AS (
+    SELECT * FROM {{ ref('mart_fullmoon_reviews')}}
+)
+
+SELECT 
+    is_full_moon,
+    review_sentiment,
+    COUNT(*) AS reviews
+FROM
+    mart_fullmoon_reviews
+GROUP BY 
+    is_full_moon,
+    review_sentiment
+ORDER BY 
+    is_full_moon,
+    review_sentiment
