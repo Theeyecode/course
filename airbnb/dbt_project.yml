@@ -39,6 +39,7 @@ models:
     +post-hook:
       - INSERT INTO {{ target.schema }}.audit_log VALUES ('{{ this }}', CURRENT_TIMESTAMP)
     +materialized: view
+    +static_analysis: 'unsafe'
     dim:
       +materialized: table
     src:

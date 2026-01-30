@@ -1,0 +1,6 @@
+airbnb/profile.yml
+airbnb/.user.yml
+
+*logs/
+*.log
+**/logs/
