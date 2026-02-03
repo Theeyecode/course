@@ -50,3 +50,6 @@ data_tests:
   +store_failures: true
 flags:
   require_generic_test_arguments_property: true
+
+vars:
+  user_name: default_user_name_for_this_project
